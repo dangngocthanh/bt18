@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+    <h2 style="font-weight: bold">Caculator</h2>
+    <input type="number" id="in" >
+    <input type="number" id="in1" ><br><br>
+    <input type="button" onclick="cal(this.id)"  id="h" value="Addition(+)">
+    <input type="button" onclick="cal(this.id)" id="t" value="Subtraction(-)">
+    <input type="button" onclick="cal(this.id)" id="m" value="Multiplication(*)">
+    <input type="button" onclick="cal(this.id)" id="l" value="Division(/)">
+    <h4 id="result"></h4>
+<script>
+function cal(id){
+    let a =+document.getElementById('in').value
+    let b =+document.getElementById('in1').value
+    if (id==="h") { let o= a+b
+        document.getElementById('result').innerHTML ="Result Addition: "+ o
+    }
+    if (id==="t") {
+        document.getElementById('result').innerHTML ="Result Subtraction: "+  (a - b)
+    }
+    if (id==="m") {
+        document.getElementById('result').innerHTML ="Result Multiplication: "+(a) * +(b)
+    }
+    if (id==="l") {
+        document.getElementById('result').innerHTML ="Result Division: "+ a / +b
+    }
+}
+
+</script>
+</body>
+</html>
